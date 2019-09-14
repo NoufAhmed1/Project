@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detail
+         
+{% endblock %}
+
+{% block body %}
+<div class="tai"><h1 >Detail page</h1></div>
+
+<div class="container2">
+          
+        
+        <div class="box2">
+                 
+                <p><strong>Type Of Item:</strong>{{i.typ}}</p>
+                <p><strong>Manufacturer:</strong>{{i.Manufacturer}}</p>
+                <p><strong>Phone Number:</strong>{{i.phonenum}}</p>
+                <p><strong>Price:</strong>{{i.price}}</p>
+                <p><strong>City:</strong>{{i.city}} </p>
+                <p><strong> Date Of Add time:</strong>{{i.start_on}}</p>
+                <p><strong>Image:</strong><img src="{{i.picture.url}}"  alt=" Image" height="400px" width="400px"> </p>
+            </div>
+
+
+        
+    </div>
+    {% endblock %}

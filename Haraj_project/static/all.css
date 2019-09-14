@@ -1,0 +1,55 @@
+
+.text-primary{
+    color:#DAA520;
+    
+}
+
+h1{
+    padding-bottom: 20px;
+    
+}
+
+.btn{
+    background-color: #B0C4DE;
+    color:#00008B ;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    
+}
+.lin{
+    text-decoration: none;
+}
+.btn-light{
+    background-color: white;
+    color:#B0C4DE;
+}
+.btn:hover{
+    background-color: #00008B;
+    color:white;
+}
+
+#homepag { 
+    background-image: url('car4.jpg');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    height: 400px;
+
+}
+#homepag .homepage-content .wel{
+    text-align: center;
+    color:#B0C4DE;
+    
+}
+#homepag .homepage-content {
+    text-align: center;
+    color:#B0C4DE;
+    padding-top: 30px;
+}
+#homepag .homepage-content h1{
+    font-size: 60px;
+
+}

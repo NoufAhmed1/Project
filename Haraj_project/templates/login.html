@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login page
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+<div class="container">
+        <h1>Login page</h1>
+        {% if messages %}
+        <div class="msgs">
+            {% for i in messages %}
+            <p>{{i}}</p>
+            {% endfor%}
+        </div>
+        {% endif %}
+
+        <form action="" method="POST" >
+                {% csrf_token %}
+                {{ form.as_p}}
+                
+            <input type="submit" value="Login " class="but">
+            <div class="reg" ><p class="reg">If you Dont have an Account do it naw<a class="link" href="{% url 'register' %}">Register</a></p></div>
+        </form>
+    </div>
+
+ {% endblock %}

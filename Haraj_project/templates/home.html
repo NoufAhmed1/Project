@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home 
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'all.css'%}">
+<div id="homepag">
+    <div class="homepage-content">
+     <h1 class="wel"><span class="text-primary">Welcom</span> To Haraj</h1>
+        <button class="btn"><a class="lin" href="{% url 'login' %}">Login</a></button>
+</div>
+    </div>
+                <div id="home">
+                        {% for i in Items %}
+                      <div class="box">
+                         <p> <a class="lin" href="{% url 'detail' i.id %}">Click for datails</a></p>
+                        <p><strong>Type Of Item:</strong>{{i.typ}}</p>
+                        <p><strong>City:</strong>{{i.city}} </p>
+                        <p><strong> Date Of Add time:</strong>{{i.start_on}}</p>
+                         </div>
+        
+        
+                         {% endfor %}
+                </div>
+                           {% endblock %}
+            
+            

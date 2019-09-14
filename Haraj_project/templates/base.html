@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <title>Haraj {% block titel %} {% endblock %} </title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Haraj</h1>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+           
+            {% if user.is_authenticated %}
+                <li>{{user.username}}</li>
+                <li><a href="{% url  'loguot' %}"> Loguot</a></li>
+                <li><a href="{% url 'add' %}">Add</a></li>
+            {% else %}
+               <a href="{% url 'register' %}"></a>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {%endif %}
+           
+
+        </ul>
+    </div>
+        {% block body %}
+        {% endblock %}
+
+        <div class="footer">
+            <p> All copyright &copy; is resered 2019</p>
+        </div>
+
+    
+</body>
+</html>
